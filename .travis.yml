@@ -1,9 +1,9 @@
 language: cpp
 compiler: gcc
 before_script:
-				- mkdir build
-				- cd build
-				- cmake ..
-				- cmake -Dtest=ON ..
+- mkdir build
+- cd build
+- cmake -Dtest=ON ..
+- cmake ..
 script: make && make test
 
