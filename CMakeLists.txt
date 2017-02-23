@@ -8,6 +8,8 @@ set(PROJECT_NAME MyProject)
 project(${PROJECT_NAME})
 
 set(CMAKE_CXX_FLAGS "-g -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0") # debug, no optimisation
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage") # enabling coverage
 
 # If you want your own include/ directory, set this, and then you can do
 # include_directories(${COMMON_INCLUDES}) in other CMakeLists.txt files.
@@ -54,5 +56,5 @@ if (test)
 
   # You can also omit NAME and COMMAND. The second argument could be some other
   # test executable.
-  add_test(that-other-test-I-made runUnitTests)
+  #add_test(that-other-test-I-made runUnitTests)
 endif()
